@@ -1,17 +1,17 @@
-(ns clj.new.app
+(ns clj.new.clj-app
   "Generate a basic application project."
   (:require [clj.new.templates
              :refer [renderer project-data project-name ->files]]))
 
-(defn app
+(defn clj-app
   "An application project template."
   [name & args]
-  (let [render (renderer "app")
+  (let [render (renderer "clj-app")
         data   (merge {:description "FIXME: my new application."}
                       (project-data name))]
     (println "Generating a project called"
              (project-name name)
-             "based on the 'app' template.")
+             "based on the 'clj-app' template.")
     (->files data
              ["deps.edn" (render "deps.edn" data)]
              ["README.md" (render "README.md" data)]

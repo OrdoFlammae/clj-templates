@@ -1,19 +1,19 @@
-(ns clj.new.lib
+(ns clj.new.clj-lib
   "Generate a library project."
   (:require [clj.new.templates
              :refer [renderer project-data project-name ->files]]))
 
-(defn lib
+(defn clj-lib
   "A general project template for libraries.
 
 Accepts a group id in the project name: `clj -A:new lib foo.bar/baz`"
   [name & args]
-  (let [render (renderer "lib")
+  (let [render (renderer "clj-lib")
         data   (merge {:description "FIXME: my new library."}
                       (project-data name))]
     (println "Generating a project called"
              (project-name name)
-             "based on the 'lib' template.")
+             "based on the 'clj-lib' template.")
     (println "The lib template is intended for library projects, not applications.")
     (->files data
              ["deps.edn" (render "deps.edn" data)]

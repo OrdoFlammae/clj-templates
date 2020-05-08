@@ -1,16 +1,16 @@
-(ns clj.new.template
+(ns clj.new.clj-template
   (:require [clj.new.templates
              :refer [renderer project-data project-name ->files]]))
 
-(defn template
+(defn clj-template
   "A meta-template for 'clj new' templates."
   [name & args]
-  (let [render (renderer "template")
+  (let [render (renderer "clj-template")
         data   (merge {:description "FIXME: my new template."}
                       (project-data name))]
     (println "Generating a project called"
              (project-name name)
-             "that is a 'clj-new' template")
+             "that is a clj-new template")
     (->files data
              ["deps.edn" (render "deps.edn" data)]
              ["README.md" (render "README.md" data)]
