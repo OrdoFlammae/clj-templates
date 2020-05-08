@@ -46,5 +46,4 @@ FIXME: listing of options this app accepts.
 
 Copyright © {{year}} {{developer}}
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Distributed under the MIT License.
