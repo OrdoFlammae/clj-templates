@@ -16,5 +16,5 @@
             :main-opts ["-m" "deps-deploy.deps-deploy" "install" "clj-app.jar"]}
   :deploy {:extra-deps {deps-deploy {:mvn/version "0.0.9"}}
            :main-opts ["-m" "deps-deploy.deps-deploy" "deploy" "clj-app.jar"]}
-  :rebel {:extra-deps {bhauman/rebel-readline {:mvn/version "0.1.4"}}
+  :rebel {:extra-deps {com.bhauman/rebel-readline {:mvn/version "0.1.4"}}
           :main-opts ["-m" "rebel-readline.main"]}}}
